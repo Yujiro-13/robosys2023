@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#! /usr/bin/python3
 # SPDX-FileCopyrightText: 2023 Yujiro Shito
 # SPDX-License-Identifier: BSD-3-Clause
 
@@ -13,6 +13,6 @@ def tonum(s):
 ans = 0
 for line in sys.stdin:
     line = line.rstrip()
-     ans += tonum(line)
+    ans += tonum(line)
 
 print(ans)
