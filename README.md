@@ -9,17 +9,17 @@ robosys 2023 assignment collection
 - python3.7~3.10
 
 ## インストール方法
-- 'git'を使用して本パッケージをダウンロードします。
-  'git clone https://github.com/Yujiro-13/robosys2023.git'
+- "git"を使用して本パッケージをダウンロードします。
+  "git clone https://github.com/Yujiro-13/robosys2023.git"
   
 ## 実行方法
 - 例 plus
-- 'seq 5 | ./plus'
+- "seq 5 | ./plus"
 - 結果
-- '15'
+- "15"
 
 ## テスト結果
-![test](https://github.com/Yujiro-13/robosys2022/actions/workflows/test.yml/badge.svg)
+[![test](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml/badge.svg)](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml)
 
 
 
