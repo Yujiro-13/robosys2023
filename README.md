@@ -1,7 +1,7 @@
 # robosys2023
-robosys 2023 assignment collection
+robosys 2023 assignment
 
-ロボットシステム学の授業課題用パッケージです。
+ロボットシステム学 2023年度の授業課題用リポジトリです。
 
 ## サポートする環境
 - Ubuntu22.04LTS
@@ -10,13 +10,19 @@ robosys 2023 assignment collection
 
 ## インストール方法
 - "git"を使用して本パッケージをダウンロードします。
-  "git clone https://github.com/Yujiro-13/robosys2023.git"
-  
+```
+$ git clone https://github.com/Yujiro-13/robosys2023.git
+```
+
 ## 実行方法
 - 例 plus
-- "seq 5 | ./plus"
+```
+$ seq 5 | ./plus
+```
 - 結果
-- "15"
+```
+$ 15
+```
 
 ## テスト結果
 [![test](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml/badge.svg)](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml)
