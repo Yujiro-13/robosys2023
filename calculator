@@ -38,7 +38,7 @@ def calculator(formula):
         result = num1 * num2
     elif operator == '/':
         if num2 == 0:
-            print("Error: ゼロでの割り算は無効です")
+            print("Error: ゼロでの割り算は無効です。")
             sys.exit(1)
         result = num1 / num2
     else:
