@@ -27,6 +27,15 @@ $ seq 5 | ./plus
 ```
 $ 15
 ```
+### calculator
+echoコマンドで出力された２値の式を受け取り、計算結果を出力します。
+```
+$ echo "2 + 3" | ./calculator
+```
+出力結果
+```
+Result: 5
+```
 
 ## テスト結果
 [![test](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml/badge.svg)](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml)
