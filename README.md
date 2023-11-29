@@ -1,11 +1,13 @@
 # robosys2023 assignment
-
 ロボットシステム学 2023年度の授業課題用ファイルをまとめたリポジトリです。
+
+## テスト結果
+[![test](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml/badge.svg)](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml)
 
 ## 実行環境
 以下の環境、ソフトウェアにおいてプロフラムの実行及びテストを確認しています。
-- Ubuntu22.04LTS
- - python3.7 ~ 3.10
+- Ubuntu 22.04 LTS
+ - python 3.7 ~ 3.10
 
 ## インストール方法
 "git"コマンドを使用してリポジトリをクローンします。
@@ -25,7 +27,7 @@ $ seq 5 | ./plus
 ```
 出力結果
 ```
-$ 15
+15
 ```
 ### 例2 calculator
 echoコマンドで出力された２値の式を受け取り、計算結果を出力します。
@@ -34,11 +36,10 @@ $ echo "2 + 3" | ./calculator
 ```
 出力結果
 ```
-Result: 5
+5
 ```
 
-## テスト結果
-[![test](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml/badge.svg)](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml)
+
 
 
 ## 著作権・ライセンス
