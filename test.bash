@@ -39,19 +39,19 @@ out=$(echo | ./plus) #空文字
 
 ### CALCULATOR TEST ###
 out=$(echo "1 + 1" | ./calculator)
-[ "${out}" = "Result: 2" ] || ng ${LINENO}
+[ "${out}" = 2 ] || ng ${LINENO}
 
 out=$(echo "7 + 3" | ./calculator)
-[ "${out}" = "Result: 10" ] || ng ${LINENO}
+[ "${out}" = 10 ] || ng ${LINENO}
 
 out=$(echo "5 - 4" | ./calculator)
-[ "${out}" = "Result: 1" ] || ng ${LINENO}
+[ "${out}" = 1 ] || ng ${LINENO}
 
 out=$(echo "6 * 8" | ./calculator)
-[ "${out}" = "Result: 48" ] || ng ${LINENO}
+[ "${out}" = 48 ] || ng ${LINENO}
 
 out=$(echo "9 / 2" | ./calculator)
-[ "${out}" = "Result: 4.5" ] || ng ${LINENO}
+[ "${out}" = 4.5 ] || ng ${LINENO}
 
 out=$(echo "a + 1" | ./calculator)
 [ "${out}" = "Input Error: 不明な入力です。" ] || ng ${LINENO}
