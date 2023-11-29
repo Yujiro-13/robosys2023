@@ -18,7 +18,7 @@ $ git clone https://github.com/Yujiro-13/robosys2023.git
 ```
 cd robosys2023
 ```
-### 例 plus
+### 例1 plus
 seqコマンドで順に出力された整数値を標準入力から受け取り、その合計値を出力します。
 ```
 $ seq 5 | ./plus
@@ -27,7 +27,7 @@ $ seq 5 | ./plus
 ```
 $ 15
 ```
-### calculator
+### 例2 calculator
 echoコマンドで出力された２値の式を受け取り、計算結果を出力します。
 ```
 $ echo "2 + 3" | ./calculator
