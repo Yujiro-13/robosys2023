@@ -5,7 +5,7 @@
 [![test](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml/badge.svg)](https://github.com/Yujiro-13/robosys2023/actions/workflows/test.yml)
 
 ## 実行環境
-以下の環境、ソフトウェアにおいてプロフラムの実行及びテストを確認しています。
+以下の環境、ソフトウェアにおいてプログラムの実行及びテストを確認しています。
 - Ubuntu 22.04 LTS
  - python 3.7 ~ 3.10
 
