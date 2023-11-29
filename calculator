@@ -1,0 +1,63 @@
+#! /usr/bin/python3
+# SPDX-FileCopyrightText: 2023 Yujiro Shito
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+def tonum(s):
+    try:
+        return int(s)
+    except ValueError:
+        return float(s)
+
+def checknum(s):
+    try:
+        int(s)
+    except ValueError:
+        print("Error: Invalid input. Please enter a number.")
+        sys.exit(1)
+
+def calculator():
+    print("Simple Calculator (Type 'exit' to end)")
+
+    try:
+        first_line = input("Enter a number: ")
+        if first_line.lower() == 'exit':
+            sys.exit(0)
+        checknum(first_line)
+        ans = tonum(first_line)
+
+        while True:
+            operator = input("Enter an operator (+, -, *, /): ")
+            if operator.lower() == 'exit':
+                break
+            if operator not in ['+', '-', '*', '/']:
+                print("Error: Invalid operator. Please enter +, -, *, /.")
+                continue
+
+            num = input("Enter another number: ")
+            if num.lower() == 'exit':
+                break
+            checknum(num)
+
+            if operator == '+':
+                ans += tonum(num)
+            elif operator == '-':
+                ans -= tonum(num)
+            elif operator == '*':
+                ans *= tonum(num)
+            elif operator == '/':
+                if tonum(num) == 0:
+                    print("Error: Division by zero.")
+                else:
+                    ans /= tonum(num)
+
+            print("Result:", ans)
+
+    except KeyboardInterrupt:
+        print("\nExiting the calculator.")
+
+if __name__ == "__main__":
+    calculator()
+
+
