@@ -7,57 +7,51 @@ import sys
 def tonum(s):
     try:
         return int(s)
-    except ValueError:
+    except:
         return float(s)
 
 def checknum(s):
     try:
         int(s)
-    except ValueError:
-        print("Error: Invalid input. Please enter a number.")
+    except:
+        print("Input Error: 不明な入力です。")
         sys.exit(1)
 
-def calculator():
-    print("Simple Calculator (Type 'exit' to end)")
+def calculator(formula):
+    tokens = formula.split()
+    if len(tokens) != 3:
+        print("Error: 無効な式です。 適切な式は 1 + 2 のように入力してください。")
+        sys.exit(1)
 
-    try:
-        first_line = input("Enter a number: ")
-        if first_line.lower() == 'exit':
-            sys.exit(0)
-        checknum(first_line)
-        ans = tonum(first_line)
+    num1, operator, num2 = tokens
+    checknum(num1)
+    checknum(num2)
 
-        while True:
-            operator = input("Enter an operator (+, -, *, /): ")
-            if operator.lower() == 'exit':
-                break
-            if operator not in ['+', '-', '*', '/']:
-                print("Error: Invalid operator. Please enter +, -, *, /.")
-                continue
+    num1 = tonum(num1)
+    num2 = tonum(num2)
 
-            num = input("Enter another number: ")
-            if num.lower() == 'exit':
-                break
-            checknum(num)
+    if operator == '+':
+        result = num1 + num2
+    elif operator == '-':
+        result = num1 - num2
+    elif operator == '*':
+        result = num1 * num2
+    elif operator == '/':
+        if num2 == 0:
+            print("Error: ゼロでの割り算は無効です")
+            sys.exit(1)
+        result = num1 / num2
+    else:
+        print("Error: その演算子は無効です。 適切な演算子 +, -, *, / を入力してください。")
+        sys.exit(1)
 
-            if operator == '+':
-                ans += tonum(num)
-            elif operator == '-':
-                ans -= tonum(num)
-            elif operator == '*':
-                ans *= tonum(num)
-            elif operator == '/':
-                if tonum(num) == 0:
-                    print("Error: Division by zero.")
-                else:
-                    ans /= tonum(num)
-
-            print("Result:", ans)
-
-    except KeyboardInterrupt:
-        print("\nExiting the calculator.")
+    print("Result:", result)
 
 if __name__ == "__main__":
-    calculator()
 
+        for line in sys.stdin:
+            formula = line.rstrip()
 
+            calculator(formula)
+
+    
