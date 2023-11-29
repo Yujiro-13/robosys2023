@@ -45,7 +45,7 @@ def calculator(formula):
         print("Error: その演算子は無効です。 適切な演算子 +, -, *, / を入力してください。")
         sys.exit(1)
 
-    print("Result:", result)
+    print(result)
 
 if __name__ == "__main__":
 
